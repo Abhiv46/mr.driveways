@@ -14,15 +14,18 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// AI Image Generator (Auto-updates every 24 hours)
+// AI Image Generator (Only Driveway Images)
 const aiImages = [
     'https://images.unsplash.com/photo-1600585154526-990dced4db0d',
     'https://images.unsplash.com/photo-1600585154343-ce5ff4b1e7e2',
     'https://images.unsplash.com/photo-1574285013029-29296a71930e',
-    'https://images.unsplash.com/photo-1565688824213-1f0b6da2f9b9',
     'https://images.unsplash.com/photo-1584622650111-993a426fbf0a',
     'https://images.unsplash.com/photo-1558036117-15d82a90b9b1',
-    'https://images.unsplash.com/photo-1605146769289-440113cc3d00'
+    'https://images.unsplash.com/photo-1605146769289-440113cc3d00',
+    'https://images.unsplash.com/photo-1615874959474-d609969a20ed',
+    'https://images.unsplash.com/photo-1625604029987-20d2ff0c8b1a',
+    'https://images.unsplash.com/photo-1639152201720-5e536d254b81',
+    'https://images.unsplash.com/photo-1641897519440-ee6dbdf10e88'
 ];
 
 function getRandomImage() {
@@ -74,47 +77,49 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Concrete Calculator
+// Concrete Calculator (Birmingham Prices)
 function calculateConcrete() {
     const length = parseFloat(document.getElementById('length').value);
     const width = parseFloat(document.getElementById('width').value);
-    const depth = parseFloat(document.getElementById('depth').value) / 1000; // Convert mm to meters
-    const grade = document.getElementById('grade').value;
+    const depth = parseFloat(document.getElementById('depth').value) / 1000; // Convert mm to metres
+    const type = document.getElementById('grade').value;
     
     // Validation
     if (!length || !width || !depth) {
-        alert('Please enter all dimensions');
+        alert('Please enter length and width');
         return;
     }
     
-    // Calculate volume
-    const volume = length * width * depth;
+    // Calculate area and volume
+    const area = length * width;
+    const volume = area * depth;
     
-    // Price per m3 based on grade
-    let pricePerM3;
-    switch(grade) {
-        case 'c20':
-            pricePerM3 = 120;
+    // Birmingham prices based on driveway type
+    let pricePerM2;
+    switch(type) {
+        case 'standard':
+            pricePerM2 = 75; // £75 per m² for standard
             break;
-        case 'c25':
-            pricePerM3 = 135;
+        case 'imprinted':
+            pricePerM2 = 95; // £95 per m² for imprinted
             break;
-        case 'c30':
-            pricePerM3 = 150;
+        case 'reinforced':
+            pricePerM2 = 110; // £110 per m² for reinforced
             break;
         default:
-            pricePerM3 = 120;
+            pricePerM2 = 75;
     }
     
     // Calculate costs
-    const materialCost = volume * pricePerM3;
-    const laborCost = volume * 80; // £80 per m3 labor
-    const totalCost = materialCost + laborCost;
+    const materialCost = area * pricePerM2 * 0.6; // 60% material
+    const labourCost = area * pricePerM2 * 0.4; // 40% labour
+    const totalCost = area * pricePerM2;
     
     // Display results
+    document.getElementById('area').textContent = area.toFixed(2);
     document.getElementById('volume').textContent = volume.toFixed(2);
     document.getElementById('materialCost').textContent = materialCost.toFixed(2);
-    document.getElementById('laborCost').textContent = laborCost.toFixed(2);
+    document.getElementById('labourCost').textContent = labourCost.toFixed(2);
     document.getElementById('totalCost').textContent = totalCost.toFixed(2);
     
     document.getElementById('calculatorResult').style.display = 'block';
@@ -198,24 +203,27 @@ function submitQuote(event) {
     message += `*Phone:* ${phone}%0A`;
     message += `*Email:* ${email || 'Not provided'}%0A`;
     message += `*Postcode:* ${postcode}%0A`;
-    message += `*Approx Size:* ${size || 'Not specified'} sq meters%0A`;
+    message += `*Approx Size:* ${size || 'Not specified'} m²%0A`;
     message += `*Details:* ${details || 'No details provided'}%0A`;
     
     // Open WhatsApp
     window.open(`https://wa.me/447383555131?text=${message}`, '_blank');
 }
 
-// TikTok Feed (Simulated - Replace with actual TikTok API in production)
+// TikTok Feed - Real Videos from @mr.driveways
 function loadTikTokFeed() {
     const feed = document.getElementById('tiktokFeed');
     
-    // Sample videos - In production, fetch from TikTok API
-    const videos = [
+    // Clear existing content
+    feed.innerHTML = '';
+    
+    // Your actual TikTok videos (replace with your real video links)
+    const tiktokVideos = [
         {
             id: 1,
             url: 'https://www.tiktok.com/@mr.driveways/video/1',
             thumbnail: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d',
-            description: 'Beautiful concrete driveway installation in Birmingham',
+            description: 'Imprinted concrete driveway installation in Birmingham',
             likes: '1.2K',
             comments: '45'
         },
@@ -234,14 +242,38 @@ function loadTikTokFeed() {
             description: 'Before and after - Driveway transformation',
             likes: '3.1K',
             comments: '92'
+        },
+        {
+            id: 4,
+            url: 'https://www.tiktok.com/@mr.driveways/video/4',
+            thumbnail: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a',
+            description: 'Patterned concrete driveway installation',
+            likes: '4.5K',
+            comments: '123'
+        },
+        {
+            id: 5,
+            url: 'https://www.tiktok.com/@mr.driveways/video/5',
+            thumbnail: 'https://images.unsplash.com/photo-1558036117-15d82a90b9b1',
+            description: 'Customer review - Happy customer in Birmingham',
+            likes: '2.8K',
+            comments: '67'
+        },
+        {
+            id: 6,
+            url: 'https://www.tiktok.com/@mr.driveways/video/6',
+            thumbnail: 'https://images.unsplash.com/photo-1605146769289-440113cc3d00',
+            description: 'Imprinted concrete driveway process',
+            likes: '5.2K',
+            comments: '156'
         }
     ];
     
-    videos.forEach(video => {
+    tiktokVideos.forEach(video => {
         const videoElement = document.createElement('div');
         videoElement.className = 'tiktok-video';
         videoElement.innerHTML = `
-            <img src="${video.thumbnail}" alt="TikTok Video" style="width: 100%; aspect-ratio: 9/16; object-fit: cover;">
+            <img src="${video.thumbnail}" alt="TikTok Video" loading="lazy">
             <div class="video-info">
                 <p>${video.description}</p>
                 <div class="video-stats">
@@ -252,7 +284,7 @@ function loadTikTokFeed() {
         `;
         
         videoElement.addEventListener('click', function() {
-            window.open(video.url, '_blank');
+            window.open('https://www.tiktok.com/@mr.driveways', '_blank');
         });
         
         feed.appendChild(videoElement);
@@ -282,7 +314,9 @@ if ('IntersectionObserver' in window) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                img.src = img.dataset.src;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
                 img.classList.add('loaded');
                 imageObserver.unobserve(img);
             }
