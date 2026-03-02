@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
     <!-- SEO Meta Tags -->
-    <title>Mr. Driveways - Best Concrete Driveways in Birmingham | Free Quote</title>
-    <meta name="description" content="Mr. Driveways Birmingham mein concrete driveways, patios aur garages ke liye best services. Free quote, AI design preview, aur 24/7 customer support. Call now!">
-    <meta name="keywords" content="concrete driveways Birmingham, driveways near me, concrete contractors Birmingham, Mr. Driveways, driveway installation UK">
+    <title>Mr. Driveways - Professional Concrete Driveways Birmingham | Free Quote</title>
+    <meta name="description" content="Mr. Driveways offers professional concrete driveway installation in Birmingham. Free quotes, AI design preview, imprinted concrete, and 5-year guarantee.">
+    <meta name="keywords" content="concrete driveways Birmingham, imprinted concrete driveways, patterned concrete, driveways near me, concrete contractors Birmingham, Mr. Driveways">
     <meta name="author" content="Mr. Driveways">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph Tags (For Social Media) -->
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="Mr. Driveways - Best Concrete Driveways Birmingham">
     <meta property="og:description" content="Professional concrete driveways in Birmingham. Get free quote with AI design preview!">
     <meta property="og:image" content="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
     <meta property="og:url" content="https://mr-driveways.vercel.app">
+    <meta property="og:type" content="website">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mr-driveways.vercel.app">
@@ -23,10 +24,10 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Font Awesome for Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Schema Markup for Local Business (SEO) -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -35,7 +36,9 @@
         "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Birmingham City Centre",
             "addressLocality": "Birmingham",
+            "postalCode": "B1 1AA",
             "addressCountry": "UK"
         },
         "geo": {
@@ -46,7 +49,10 @@
         "url": "https://mr-driveways.vercel.app",
         "telephone": "+447383555131",
         "openingHours": "Mo-Su 07:00-20:00",
-        "priceRange": "££"
+        "priceRange": "££",
+        "sameAs": [
+            "https://www.tiktok.com/@mr.driveways"
+        ]
     }
     </script>
 </head>
@@ -58,6 +64,7 @@
                 Mr. Driveways
                 <span>Birmingham's Trusted Concrete Experts</span>
             </div>
+            
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
@@ -103,10 +110,10 @@
             </div>
         </section>
 
-        <!-- AI Generated Images Section (Auto Updates) -->
+        <!-- AI Generated Images Section (Only Driveways) -->
         <section class="ai-image-section">
             <h2 class="section-title">✨ AI Generated Driveway Designs</h2>
-            <p class="section-subtitle">Har 24 ghante mein naye designs - Apna dream driveway dekhein!</p>
+            <p class="section-subtitle">New designs every 24 hours - See your dream driveway!</p>
             
             <div class="ai-image-container" id="aiImageContainer">
                 <img id="aiImage" class="ai-image" src="" alt="AI Generated Concrete Driveway">
@@ -124,22 +131,22 @@
 
         <!-- Services Section -->
         <section id="services" class="services-section">
-            <h2 class="section-title">Humari Services</h2>
+            <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-road service-icon"></i>
                     <h3>Concrete Driveways</h3>
-                    <p>Strong, durable aur beautiful concrete driveways for your home.</p>
+                    <p>Strong, durable and beautiful concrete driveways for your home.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-car service-icon"></i>
-                    <h3>Garage Floors</h3>
-                    <p>Professional garage floor installation with reinforcement.</p>
+                    <h3>Imprinted Concrete</h3>
+                    <p>Patterned and coloured concrete driveways with unique designs.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-tree service-icon"></i>
-                    <h3>Patios & Pathways</h3>
-                    <p>Beautiful patios aur garden pathways custom design.</p>
+                    <h3>Front Drives</h3>
+                    <p>Professional front driveway installation and transformation.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-tint service-icon"></i>
@@ -149,31 +156,31 @@
             </div>
         </section>
 
-        <!-- Concrete Calculator Section -->
+        <!-- Concrete Calculator Section (Birmingham Prices) -->
         <section id="calculator" class="calculator-section">
             <h2 class="section-title">🧮 Concrete Calculator</h2>
-            <p class="section-subtitle">Apne driveway ke liye concrete quantity aur price estimate karein</p>
+            <p class="section-subtitle">Calculate concrete quantity and price estimate for your driveway (Birmingham rates)</p>
             
             <div class="calculator-container">
                 <div class="calculator-inputs">
                     <div class="input-group">
-                        <label>Length (Meters)</label>
-                        <input type="number" id="length" placeholder="e.g., 10" min="0" step="0.1">
+                        <label>Length (Metres)</label>
+                        <input type="number" id="length" placeholder="e.g., 10" min="0" step="0.1" required>
                     </div>
                     <div class="input-group">
-                        <label>Width (Meters)</label>
-                        <input type="number" id="width" placeholder="e.g., 5" min="0" step="0.1">
+                        <label>Width (Metres)</label>
+                        <input type="number" id="width" placeholder="e.g., 5" min="0" step="0.1" required>
                     </div>
                     <div class="input-group">
                         <label>Depth (mm)</label>
                         <input type="number" id="depth" placeholder="e.g., 100" min="50" max="300" value="100">
                     </div>
                     <div class="input-group">
-                        <label>Concrete Grade</label>
+                        <label>Driveway Type</label>
                         <select id="grade">
-                            <option value="c20">C20/25 (Standard Driveway)</option>
-                            <option value="c25">C25/30 (Heavy Duty)</option>
-                            <option value="c30">C30/37 (Commercial)</option>
+                            <option value="standard">Standard Concrete Driveway</option>
+                            <option value="imprinted">Imprinted/Patterned Concrete</option>
+                            <option value="reinforced">Reinforced Heavy Duty</option>
                         </select>
                     </div>
                     <button onclick="calculateConcrete()" class="calculate-btn">
@@ -184,6 +191,10 @@
                 <div class="calculator-result" id="calculatorResult" style="display: none;">
                     <h3>📊 Estimated Cost Breakdown</h3>
                     <div class="result-item">
+                        <span>Driveway Area:</span>
+                        <strong><span id="area">0</span> m²</strong>
+                    </div>
+                    <div class="result-item">
                         <span>Concrete Volume:</span>
                         <strong><span id="volume">0</span> m³</strong>
                     </div>
@@ -192,14 +203,14 @@
                         <strong>£<span id="materialCost">0</span></strong>
                     </div>
                     <div class="result-item">
-                        <span>Labor Cost:</span>
-                        <strong>£<span id="laborCost">0</span></strong>
+                        <span>Labour Cost:</span>
+                        <strong>£<span id="labourCost">0</span></strong>
                     </div>
                     <div class="result-item total">
                         <span>Total Estimate:</span>
                         <strong>£<span id="totalCost">0</span></strong>
                     </div>
-                    <p class="result-note">*Yeh approximate estimate hai. Exact quote ke liye contact karein.</p>
+                    <p class="result-note">*Approximate estimate based on Birmingham rates. Contact us for exact quote.</p>
                 </div>
             </div>
         </section>
@@ -207,7 +218,7 @@
         <!-- Quote Request Section with Image Upload -->
         <section id="quote" class="quote-section">
             <h2 class="section-title">📋 Free Quote Request</h2>
-            <p class="section-subtitle">Apni driveway ki photo upload karein aur turant quote payein</p>
+            <p class="section-subtitle">Upload your driveway photo and get an instant quote</p>
             
             <div class="quote-container">
                 <form id="quoteForm" onsubmit="submitQuote(event)">
@@ -231,7 +242,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label>Driveway Size (approx sq meters)</label>
+                        <label>Driveway Size (approx m²)</label>
                         <input type="number" id="size" placeholder="e.g., 50">
                     </div>
                     
@@ -240,9 +251,9 @@
                         <label>Upload Driveway Photo (Optional)</label>
                         <div class="upload-area" id="uploadArea">
                             <i class="fas fa-cloud-upload-alt"></i>
-                            <p>Click here ya drag karein photo upload karne ke liye</p>
+                            <p>Click here or drag and drop to upload photo</p>
                             <input type="file" id="imageUpload" accept="image/*" hidden>
-                            <p class="upload-hint">Max size: 10MB (JPG, PNG)</p>
+                            <p class="upload-hint">Max size: 10MB (JPG, PNG) - Driveway photos only please</p>
                         </div>
                         <div id="uploadPreview" class="upload-preview" style="display: none;">
                             <img id="previewImage" src="" alt="Preview">
@@ -254,7 +265,7 @@
                     
                     <div class="form-group">
                         <label>Additional Details</label>
-                        <textarea id="details" rows="3" placeholder="Apni requirements batayein..."></textarea>
+                        <textarea id="details" rows="3" placeholder="Tell us about your requirements... (imprinted concrete, pattern, colour, etc.)"></textarea>
                     </div>
                     
                     <button type="submit" class="submit-btn">
@@ -264,10 +275,10 @@
             </div>
         </section>
 
-        <!-- TikTok Videos Feed -->
+        <!-- TikTok Videos Feed - Real Videos -->
         <section class="tiktok-section">
             <div class="tiktok-header">
-                <h2 class="section-title">🎥 Humara Kaam Dekhein</h2>
+                <h2 class="section-title">🎥 Watch Our Work on TikTok</h2>
                 <a href="https://www.tiktok.com/@mr.driveways" target="_blank" class="tiktok-profile-link">
                     <i class="fab fa-tiktok"></i> @mr.driveways
                 </a>
@@ -275,6 +286,82 @@
             
             <div class="tiktok-grid" id="tiktokFeed">
                 <!-- Videos will be loaded here via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Gallery Section - Only Driveway Images -->
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title">📸 Our Driveway Projects</h2>
+            <p class="section-subtitle">Recent concrete driveway installations in Birmingham</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d" alt="Imprinted Concrete Driveway">
+                    <div class="gallery-overlay">
+                        <span>Imprinted Concrete</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600585154343-ce5ff4b1e7e2" alt="Patterned Driveway">
+                    <div class="gallery-overlay">
+                        <span>Patterned Concrete</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574285013029-29296a71930e" alt="Front Drive Installation">
+                    <div class="gallery-overlay">
+                        <span>Front Drive</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" alt="Coloured Concrete Driveway">
+                    <div class="gallery-overlay">
+                        <span>Coloured Concrete</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1" alt="Block Paving Driveway">
+                    <div class="gallery-overlay">
+                        <span>Block Paving</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00" alt="Resin Bound Driveway">
+                    <div class="gallery-overlay">
+                        <span>Resin Bound</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="Gravel Driveway">
+                    <div class="gallery-overlay">
+                        <span>Gravel Driveway</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1625604029987-20d2ff0c8b1a" alt="Modern Driveway Design">
+                    <div class="gallery-overlay">
+                        <span>Modern Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fencing & Gardening Section (Optional) -->
+        <section id="landscaping" class="landscaping-section">
+            <h2 class="section-title">🌳 Additional Services</h2>
+            <p class="section-subtitle">Complete your driveway with professional landscaping</p>
+            
+            <div class="landscaping-grid">
+                <div class="landscaping-card">
+                    <img src="https://images.unsplash.com/photo-1598908318887-5da6f1b4f7d3" alt="Garden Fencing">
+                    <h3>Garden Fencing</h3>
+                    <p>Professional fencing installation to complement your driveway</p>
+                </div>
+                <div class="landscaping-card">
+                    <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01" alt="Garden Landscaping">
+                    <h3>Garden Landscaping</h3>
+                    <p>Complete garden makeover and landscaping services</p>
+                </div>
             </div>
         </section>
 
@@ -340,7 +427,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Mr. Driveways. All rights reserved. | Birmingham, UK</p>
+            <p>© 2024 Mr. Driveways. All rights reserved. | Birmingham, UK</p>
         </div>
     </footer>
 
