@@ -603,6 +603,7 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .tiktok-video:hover {
@@ -610,7 +611,7 @@ body {
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.tiktok-video video {
+.tiktok-video img {
     width: 100%;
     aspect-ratio: 9/16;
     object-fit: cover;
@@ -635,6 +636,99 @@ body {
 
 .video-stats i {
     margin-right: 0.3rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem;
+    margin-bottom: 4rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 1rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Landscaping Section */
+.landscaping-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem;
+    margin-bottom: 4rem;
+}
+
+.landscaping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.landscaping-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.landscaping-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.landscaping-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.landscaping-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    color: #2c3e50;
+}
+
+.landscaping-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
 }
 
 /* Contact Section */
@@ -822,6 +916,8 @@ body {
     .calculator-section,
     .quote-section,
     .tiktok-section,
+    .gallery-section,
+    .landscaping-section,
     .contact-section {
         padding: 2rem 1rem;
     }
