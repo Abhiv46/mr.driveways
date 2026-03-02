@@ -1,1 +1,3 @@
-
+User-agent: *
+Allow: /
+Sitemap: https://mr-driveways.vercel.app/sitemap.xml
